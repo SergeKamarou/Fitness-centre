@@ -1,0 +1,234 @@
+.trainers__wrap {
+  padding-top: 56px;
+  padding-bottom: 90px;
+  position: relative;
+  width: 90%;
+
+  @include vp-1199 {
+    padding-bottom: 50px;
+    padding-top: 51px;
+    width: 85%;
+  }
+
+  @include vp-767 {
+    padding-top: 14px;
+    padding-bottom: 70px;
+    width: 80%;
+  }
+}
+
+.trainers__wrap--nojs {
+  .trainers__list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  .trainers__item {
+    &:last-child {
+      margin-right: auto;
+    }
+
+    @include vp-1199 {
+      width: calc(268/566*100%);
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  .trainers__slider-button {
+    display: none;
+  }
+}
+
+.trainers__title {
+  @include font(600, 54px, 65px);
+  font-family: $ff-secondary;
+  letter-spacing: 0.03em;
+  margin: 0 0 48px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 7px 31px 0;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin: 0 7px 42px 0;
+  }
+}
+
+.trainers__slider {
+  position: relative;
+}
+
+.trainers__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trainers__item {
+  position: relative;
+  width: calc(260/1160*100%);
+  // min-height: 294px;
+  display: flex;
+  flex-direction: column-reverse;
+  // justify-content: flex-end;
+  align-items: center;
+  aspect-ratio: 260/294;
+
+  @include hover-focus {
+    flex-direction: column;
+
+    .trainers__title-name {
+      display: none;
+    }
+
+    .trainers__about-wrap {
+      display: flex;
+    }
+  }
+
+  @include vp-1199 {
+    aspect-ratio: 268/294;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226/274;
+  }
+}
+
+.trainers__img-wrap {
+  position: absolute;
+  z-index: -2;
+  background-color: $color-sapphire;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.trainers__title-name {
+  @include font(700, 18px, 27px);
+  color: $color-default-white;
+  margin-bottom: 22px;
+}
+
+.trainers__about-wrap {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 52px 30px 10px;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  background-color: $color-sapphire-transparent-89;
+
+  @include vp-767 {
+    padding: 42px 8px 10px;
+  }
+}
+
+.trainers__about-name {
+  @include font(700, 18px, 27px);
+  color: $color-default-white;
+  margin: 0;
+
+  @include vp-1199 {
+    margin-right: 11px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+}
+
+.trainers__about-sport {
+  @include font(400, 16px, 1);
+  color: $color-spindle;
+  margin: 0 0 37px;
+
+  @include vp-1199 {
+    margin: 0 9px 37px 0;
+  }
+
+  @include vp-767 {
+    margin: 0 0 37px;
+  }
+}
+
+.trainers__info-list {
+  @include font(400, 14px, 21px);
+  color: $color-default-white;
+  list-style-type: none;
+}
+
+.trainers__info-item {
+  margin-bottom: 13px;
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 6px;
+    width: 6px;
+    border-radius:50%;
+    background-color: $color-default-white;
+    position: absolute;
+    left: -17px;
+    top: 7px;
+  }
+}
+
+.trainers__slider-button {
+  top: 57%;
+
+  &::after {
+    font-size: 34px;
+    color: $color-dark-gray;
+
+    @include vp-767 {
+      font-size: 18px;
+    }
+  }
+
+  &--prev {
+    left: -42px;
+  }
+
+  &--next {
+    right: -42px;
+  }
+
+  @include vp-1199 {
+    top: 58.5%;
+
+    &--prev {
+      left: -18px;
+    }
+
+    &--next {
+      right: -18px;
+    }
+  }
+
+  @include vp-767 {
+    top: 53%;
+
+    &--prev {
+      left: -26px;
+    }
+
+    &--next {
+      right: -26px;
+    }
+  }
+}

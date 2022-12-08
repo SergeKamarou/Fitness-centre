@@ -28,6 +28,7 @@ $color-sapphire-transparent-89:      rgba(16, 38, 84, .89);
 $color-crimson-transparent:          rgba(209, 10, 66, .2);
 $color-dark-cerulean-transparent:    rgba(20, 54, 122, .5);
 $color-grey-transparent:             rgba(120, 120, 120, .2);
+$color-resolution-blue-transparent:  rgba(28, 51, 116, 0.2);
 
 // Gradient
 
@@ -37,6 +38,8 @@ $header-tablet-gradient:                       conic-gradient(from 139.4deg at 2
 $header-mobile-gradient:                       conic-gradient(from 171.43deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 $button-gradient:                              linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
 $card-border-gradient:                         linear-gradient(to right bottom, #d10a42 0%, #00359f 100%);
+$text-gradient-900:                            linear-gradient(127.61deg, #D10A42 0%, #0041CA 45.58%);
+$text-gradient:                                linear-gradient(142.51deg, #D10A42 0%, #0041CA 87.33%);
 
 
 // Typography

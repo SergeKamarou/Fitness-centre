@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import './modules/pixel';// delete
 import {initVideo} from './modules/video';
 import {initTabs} from './modules/tabs';
+import {initSliders} from './modules/slider';
 
 // ---------------------------------
 
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   initVideo();
   initTabs();
+  initSliders();
 
   // Modules
   // ---------------------------------

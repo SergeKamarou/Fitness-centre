@@ -1,7 +1,7 @@
 .subscriptions {
-  min-height: 923px;
+  min-height: 851px;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
   background-color: $color-ghost-white;
 
@@ -10,7 +10,7 @@
     width: 470px;
     height: 493px;
     position: absolute;
-    bottom: -77px;
+    bottom: -149px;
     right: -182px;
     background-image: url("../img/weights.png");
     background-repeat: no-repeat;
@@ -49,6 +49,7 @@
 
   @include vp-767 {
     padding-top: 30px;
+    padding-bottom: 70px;
   }
 }
 
@@ -87,6 +88,11 @@
     background-color: $color-grey-transparent;
     position: absolute;
     bottom: 0;
+
+    @include vp-767 {
+      width: 100%;
+      bottom: -2px;
+    }
   }
 
   @include vp-1199 {
@@ -118,13 +124,17 @@
 
   &::after {
     content: "";
-    width: 110%;
+    width: 88%;
     height: 2px;
     background-color: $color-crimson;
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+
+    @include vp-767 {
+      width: 110%;
+    }
   }
 }
 
@@ -140,6 +150,12 @@
   @include vp-767 {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @include hover-focus {
+    &:not(.is-current) {
+      color: $color-crimson;
+    }
   }
 }
 
@@ -275,5 +291,12 @@
 
   @include vp-767 {
     margin: 29px auto 0;
+  }
+
+  @include focus {
+    background: $button-gradient;
+    border-image: $button-gradient;
+    border-image-slice: 1;
+    outline: 4px solid $color-egyptian-blue;
   }
 }

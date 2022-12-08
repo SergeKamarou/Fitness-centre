@@ -1,0 +1,170 @@
+.reviews__wrap {
+  padding-top: 61px;
+  padding-bottom: 120px;
+  position: relative;
+
+  @include vp-1199 {
+    padding-top: 41px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 14px;
+    padding-bottom: 70px;
+  }
+}
+
+.reviews__wrap--nojs {
+  .reviews__list {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .reviews__button {
+    display: none;
+  }
+}
+
+.reviews__slider-wrap {
+  width: 48%;
+
+  @include vp-1199 {
+    width: 83%;
+  }
+
+  @include vp-767 {
+    width: 78%;
+  }
+}
+
+.reviews__title {
+  @include font(600, 54px, 65px);
+  font-family: $ff-secondary;
+  letter-spacing: 0.03em;
+  margin: 0 0 37px;
+  text-align: center;
+  text-indent: 0.2em;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    margin: 0 13px 41px 0;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+ }
+
+.reviews__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reviews__item {
+  background-color: $color-resolution-blue;
+  box-shadow: 0px 0px 40px $color-resolution-blue-transparent;
+  min-height: 242px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 28px;
+  padding: 55px 55px 44px 61px;
+
+
+  span {
+    @include font(700, 20px, 30px);
+    color: $color-default-white;
+
+    @include vp-767 {
+      line-height: 26px;
+      padding: 9px 0 0 11px;
+    }
+  }
+
+  p {
+    @include font(400, 16px, 22px);
+    color: $color-default-white;
+    margin: 0;
+
+    @include vp-767 {
+      grid-column: 1/-1;
+      text-align: center;
+    }
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0;
+    padding: 40px 22px 20px;
+    min-height: 335px;
+  }
+}
+
+.reviews__img-wrap {
+  grid-row: span 2;
+  padding-top: 8px;
+
+  @include vp-767 {
+    grid-row: auto;
+    padding: 0 0 0 19px;
+
+    img {
+      width: 68px;
+      height: 68px;
+    }
+  }
+}
+
+.reviews__button {
+  top: 54%;
+
+  &::after {
+    font-size: 32px;
+    color: $color-dark-gray;
+
+    @include vp-767 {
+      font-size: 20px;
+    }
+  }
+
+  &--prev {
+    left: 21.5%;
+
+    @include vp-1199 {
+      left: 5.2%;
+    }
+
+    @include vp-767 {
+      left: 2.3%;
+    }
+  }
+
+  &--next {
+    right: 21.5%;
+
+    @include vp-1199 {
+      right: 5.2%;
+    }
+
+    @include vp-767 {
+      right: 2.3%;
+    }
+  }
+
+  @include vp-1199 {
+    top: 53.3%;
+  }
+
+  @include vp-767 {
+    top: 52.5%;
+  }
+
+  @include hover-focus {
+    &::after {
+      color: $color-resolution-blue;
+    }
+  }
+}
+
