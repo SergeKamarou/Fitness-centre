@@ -30,7 +30,7 @@
     }
 
     @include vp-1199 {
-      width: calc(268/566*100%);
+      width: calc(268 / 566 * 100%);
     }
 
     @include vp-767 {
@@ -75,11 +75,9 @@
 
 .trainers__item {
   position: relative;
-  width: calc(260/1160*100%);
-  // min-height: 294px;
+  width: calc(260 / 1160 * 100%);
   display: flex;
   flex-direction: column-reverse;
-  // justify-content: flex-end;
   align-items: center;
   aspect-ratio: 260/294;
 
@@ -180,7 +178,7 @@
     content: "";
     height: 6px;
     width: 6px;
-    border-radius:50%;
+    border-radius: 50%;
     background-color: $color-default-white;
     position: absolute;
     left: -17px;

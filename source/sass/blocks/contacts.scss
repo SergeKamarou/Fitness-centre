@@ -1,0 +1,25 @@
+.contacts {
+  display: flex;
+
+  @include vp-1199 {
+    flex-direction: column;
+    padding-bottom: 26px;
+  }
+}
+
+.contacts__feedback {
+  width: 50%;
+  background-color: $color-sapphire;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.contacts__address {
+  width: 50%;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}

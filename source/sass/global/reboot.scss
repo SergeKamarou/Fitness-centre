@@ -27,25 +27,6 @@ html {
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
 }
-//pixel-glass
-HTML {
-  background-repeat: no-repeat;
-  background-position:  50% 0;
-  /* Mobile layout by default */
-  background-image: url( "../img/Desktop.png" );
-  // background-image: url( "../img/desk.png" );
-}
-@media ( max-width: 1159px ) {
-  HTML {
-    background-image: url( "../img/Tablet.png" );
-  }
-}
-@media ( max-width: 767px ) {
-  HTML {
-    background-image: url( "../img/Phone.png" );
-  }
-}
-/////delete
 
 body {
   width: 100%;

@@ -1,3 +1,4 @@
+const tabContainer = document.querySelector('[data-tab-container]');
 const tabButtons = document.querySelectorAll('[data-tab-button]');
 const tabItemElements = document.querySelectorAll('[data-tab]');
 
@@ -25,9 +26,11 @@ const tabClickHandler = (item) => {
 };
 
 const initTabs = () => {
-  tabButtons[0].classList.add('is-current');
-  tabItemElements[0].classList.add('is-active');
-  tabButtons.forEach(tabClickHandler);
+  if (tabContainer) {
+    tabButtons[0].classList.add('is-current');
+    tabItemElements[0].classList.add('is-active');
+    tabButtons.forEach(tabClickHandler);
+  }
 };
 
 export {initTabs};

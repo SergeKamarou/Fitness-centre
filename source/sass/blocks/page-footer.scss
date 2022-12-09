@@ -1,0 +1,160 @@
+.page-footer {
+  background-color: $color-black-russian;
+  min-height: 108px;
+  width: 100%;
+
+  @include vp-1199 {
+    min-height: 114px;
+  }
+
+  @include vp-767 {
+    min-height: 260px;
+  }
+}
+
+.page-footer__wrap {
+  display: grid;
+  grid-template-columns: repeat(10, calc(108 / 1160 * 100%));
+  gap: calc(10 / 1160 * 100%);
+  padding-top: 42px;
+  padding-bottom: 25px;
+
+  @include vp-1199 {
+    padding: 45px 34px 37px 45px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 33px;
+    padding-top: 45px;
+  }
+}
+
+.page-footer__nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 21px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  grid-column: 1 / 8;
+  column-gap: 5.1%;
+
+  @include vp-1199 {
+    grid-column: 1/9;
+    padding: 0 21px 0 0;
+    row-gap: 15px;
+    column-gap: 30px;
+  }
+
+  @include vp-767 {
+    justify-content: space-between;
+    width: 242px;
+    padding: 0;
+  }
+}
+
+.page-footer__nav-item {
+  &--logo {
+    flex-grow: 1;
+
+    @include vp-1199 {
+      margin-top: 3px;
+    }
+  }
+
+  @include vp-767 {
+    width: 34%;
+  }
+
+  @include vp-767 {
+    &--logo {
+      order: 1;
+    }
+
+    &--special {
+      order: 2;
+    }
+
+    &--services {
+      order: 3;
+    }
+
+    &--trainers {
+      order: 4;
+    }
+
+    &--subscription {
+      order: 5;
+    }
+
+    &--time {
+      order: 6;
+    }
+  }
+}
+
+.page-footer__nav-link {
+  @include font(400, 14px, 16px);
+  color: $color-default-white;
+
+  @include hover-focus {
+    color: $color-dark-gray;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &--logo {
+    svg {
+      @include vp-1199 {
+        width: 82px;
+        height: 18px;
+      }
+
+      @include vp-767 {
+        width: 68px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+.page-footer__social-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 11px 0 0;
+  grid-column: -4 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  column-gap: 3.4%;
+
+  @include vp-1199 {
+    grid-column: -1/-3;
+    column-gap: 8.6%;
+    row-gap: 7px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 11px;
+  }
+}
+
+.page-footer__social-link {
+  svg {
+    fill: $color-default-white;
+  }
+
+  @include hover-focus {
+    svg {
+      fill: $color-dark-gray;
+    }
+  }
+}

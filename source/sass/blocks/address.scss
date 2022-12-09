@@ -1,0 +1,127 @@
+.address__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 63px 10px 37px 123px;
+
+  @include vp-1199 {
+    padding: 66px 65px 37px 132px;
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    padding: 67px 15px 37px;
+  }
+}
+
+.address__main-title {
+  @include font(600,54px, 1);
+  font-family: $ff-secondary;
+  letter-spacing: 0.03em;
+  margin: 0 0 42px;
+  width: 100%;
+
+  @include vp-1199 {
+    font-size: 42px;
+    // width: 71%;
+    margin: 0 0 36px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    margin: 0 0 38px;
+  }
+}
+
+.address__list {
+  margin: 0;
+  // width: 410px;
+  width: 490px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 16px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 1px;
+    height: 90%;
+    background-color: $color-light-slate-grey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 47%;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  @include vp-1199 {
+    width: 100%;
+    row-gap: 21px;
+  }
+
+  @include vp-767 {
+    justify-content: flex-start;
+  }
+}
+
+.address__item-wrap {
+  width: 41%;
+
+  @include vp-1199 {
+    width: 45%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &--address {
+      order: 1;
+    }
+
+    &--phone {
+      order: 3;
+    }
+
+    &--time {
+      order: 2;
+    }
+
+    &--mail {
+      order: 4;
+    }
+  }
+}
+
+.address__title {
+  @include font(700, 16px, 24px);
+  margin-bottom: 4px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.address__desc {
+  @include font(400, 14px, 21px);
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.address__link {
+  color: inherit;
+
+  @include hover-focus {
+    color: $color-light-slate-grey;
+  }
+}

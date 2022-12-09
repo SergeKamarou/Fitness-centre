@@ -1,7 +1,9 @@
 const videoContainer = document.querySelector('[data-video]');
 
 const initVideo = () => {
-  setupVideo(videoContainer);
+  if (videoContainer) {
+    setupVideo(videoContainer);
+  }
 };
 
 function setupVideo(video) {

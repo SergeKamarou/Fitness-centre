@@ -187,7 +187,7 @@
 
 .subscriptions__card {
   background-color: $color-default-white;
-  width: calc(360/1160*100%);
+  width: calc(360 / 1160 * 100%);
   aspect-ratio: 360/448;
   z-index: 1;
   padding: 56px 2px 61px 0;
@@ -218,7 +218,6 @@
     width: 100%;
     max-width: 449px;
     min-height: 384px;
-
   }
 }
 
@@ -250,7 +249,9 @@
   &::before {
     content: attr(data-price);
     position: absolute;
-    @include font(700, 100px, 150px);
+    font-weight: 700;
+    font-size: 100px;
+    list-style: 150px;
     color: $color-whisper;
     opacity: 0.48;
     top: -64px;
@@ -278,11 +279,11 @@
 }
 
 .subscriptions__card-link {
+  @include font(700, 12px, 14px);
   display: block;
   width: 206px;
   min-height: 64px;
   border: 2px solid $color-sapphire;
-  @include font(700, 12px, 14px);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-align: center;
