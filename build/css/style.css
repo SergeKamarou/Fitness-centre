@@ -2094,6 +2094,7 @@ button,
   line-height: 21px;
   width: 34px;
   display: inline-block;
+  vertical-align: baseline;
 }
 
 .games__date-desc::before {
