@@ -28,31 +28,44 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 33px;
-    padding-top: 45px;
+    padding-top: 51px;
+    padding-bottom: 45px;
   }
 }
 
 .page-footer__nav-list {
   list-style-type: none;
   margin: 0;
-  padding: 0 21px 0 0;
+  padding: 0 21px 0 12px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  grid-column: 1 / 8;
-  column-gap: 5.1%;
+  justify-content: center;
+  grid-column: 3 / 9;
+  column-gap: 40px;
+
+  &::before {
+    content: "";
+    width: 45%;
+    height: 25px;
+    display: none;
+  }
 
   @include vp-1199 {
-    grid-column: 1/9;
-    padding: 0 21px 0 0;
+    grid-column: 3/9;
+    padding: 0 21px 0 4px;
     row-gap: 15px;
     column-gap: 30px;
   }
 
   @include vp-767 {
     justify-content: space-between;
-    width: 242px;
+    width: 280px;
     padding: 0;
+    margin: -58px 0 0;
+
+    &::before {
+      display: block;
+    }
   }
 }
 
@@ -66,7 +79,7 @@
   }
 
   @include vp-767 {
-    width: 34%;
+    width: 43%;
   }
 
   @include vp-767 {
@@ -99,9 +112,14 @@
 .page-footer__nav-link {
   @include font(400, 14px, 16px);
   color: $color-default-white;
+  user-select: none;
 
   @include hover-focus {
     color: $color-dark-gray;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 
   @include vp-767 {
@@ -110,6 +128,11 @@
   }
 
   &--logo {
+    @include vp-1199 {
+      grid-column: 1/2;
+      margin-top: 2px;
+    }
+
     svg {
       @include vp-1199 {
         width: 82px;
@@ -128,11 +151,11 @@
   list-style-type: none;
   margin: 0;
   padding: 0 11px 0 0;
-  grid-column: -4 / -1;
+  grid-column: 9 / -1;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  column-gap: 3.4%;
+  column-gap: 5%;
 
   @include vp-1199 {
     grid-column: -1/-3;
@@ -156,5 +179,9 @@
     svg {
       fill: $color-dark-gray;
     }
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }

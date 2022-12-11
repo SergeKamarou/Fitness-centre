@@ -23,7 +23,6 @@
 
   @include vp-1199 {
     font-size: 42px;
-    // width: 71%;
     margin: 0 0 36px;
   }
 
@@ -35,7 +34,6 @@
 
 .address__list {
   margin: 0;
-  // width: 410px;
   width: 490px;
   display: flex;
   flex-wrap: wrap;
@@ -122,6 +120,8 @@
   color: inherit;
 
   @include hover-focus {
-    color: $color-light-slate-grey;
+    color: $color-egyptian-blue;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 }

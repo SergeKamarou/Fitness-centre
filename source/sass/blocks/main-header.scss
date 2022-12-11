@@ -17,6 +17,7 @@
 
 .main-header__wrap {
   padding-top: 32px;
+  padding-bottom: 50px;
   display: grid;
   grid-template-columns: calc(395 / 1160 * 100%) calc(700 / 1160 * 100%);
   column-gap: calc(65 / 1160 * 100%);
@@ -25,24 +26,31 @@
     grid-template-columns: repeat(2, calc(324 / 678 * 100%));
     column-gap: calc(30 / 678 * 100%);
     padding-top: 34px;
+    padding-bottom: 80px;
   }
 
   @include vp-767 {
     padding-top: 17px;
     display: block;
+    padding-bottom: 80px;
   }
 }
 
-.main-header__logo-wrapp {
+.main-header__logo-wrap {
   display: flex;
-  justify-content: space-between;
   grid-column: 1 / -1;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .main-header__logo {
   margin-top: 8px;
 
+  width: 150px;
+  margin-right: auto;
+
   @include vp-1199 {
+    width: 115px;
     margin-top: 5px;
 
     svg {
@@ -61,11 +69,37 @@
   }
 }
 
+.main-header__phone-wrap {
+  width: 17%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  @include vp-1199 {
+    width: 70%;
+    column-gap: 25px;
+  }
+
+  @include vp-767 {
+    width: 60%;
+  }
+}
+
 .main-header__phone {
   @include font(600, 26px, 31px);
   font-family: $ff-secondary;
   color: $color-default-white;
   letter-spacing: 0.03em;
+
+
+  @include hover-focus {
+    color: $color-egyptian-blue;
+  }
+
+  &:active {
+    color: $color-egyptian-blue;
+    opacity: 0.5;
+  }
 
   @include vp-1199 {
     font-size: 24px;
@@ -158,6 +192,7 @@
   @include vp-767 {
     max-width: 420px;
     margin: 0 auto 23px;
+    align-items: flex-start;
   }
 }
 
@@ -178,7 +213,7 @@
 
   @include vp-767 {
     margin: 0 -12px 0 0;
-    padding: 0 0 31px;
+    padding: 175px 0 31px;
   }
 }
 
@@ -195,6 +230,7 @@
   padding: 19px;
   margin-left: auto;
   margin-right: -2px;
+  user-select: none;
 
   @include vp-1199 {
     width: 187px;
@@ -209,5 +245,12 @@
     background: $button-gradient;
     border-image: $button-gradient;
     border-image-slice: 1;
+  }
+
+  &:active {
+    background: $button-gradient;
+    border-image: $button-gradient;
+    border-image-slice: 1;
+    opacity: 0.5;
   }
 }

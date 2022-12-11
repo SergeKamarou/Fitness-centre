@@ -93,6 +93,18 @@
     }
   }
 
+  &:focus-within {
+    flex-direction: column;
+
+    .trainers__title-name {
+      display: none;
+    }
+
+    .trainers__about-wrap {
+      display: flex;
+    }
+  }
+
   @include vp-1199 {
     aspect-ratio: 268/294;
   }
@@ -118,7 +130,8 @@
 .trainers__title-name {
   @include font(700, 18px, 27px);
   color: $color-default-white;
-  margin-bottom: 22px;
+  margin: 0;
+  padding: 22px;
 }
 
 .trainers__about-wrap {

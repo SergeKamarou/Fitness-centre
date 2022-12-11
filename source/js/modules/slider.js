@@ -5,14 +5,19 @@ const initSliders = () => {
   if (trainersSliderContainer) {
     trainersSliderContainer.classList.remove('trainers__wrap--nojs');
 
-    const swiper = new Swiper('.swiper--trainers', {
+    const trainersSlider = new Swiper('.swiper--trainers', {
       direction: 'horizontal',
       loop: true,
       loopFillGroupWithBlank: true,
+      slideToClickedSlide: true,
 
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+      },
+
+      keyboard: {
+        enabled: true,
       },
 
       breakpoints: {
@@ -30,12 +35,18 @@ const initSliders = () => {
         },
       },
     });
+
+    let sliderDuplecateElements = trainersSliderContainer.querySelectorAll('.swiper-slide-duplicate');
+
+    sliderDuplecateElements.forEach((item) => {
+      item.removeAttribute('tabindex');
+    });
   }
 
   if (reviewsSliderContainer) {
     reviewsSliderContainer.classList.remove('reviews__wrap--nojs');
 
-    const reviews = new Swiper('.reviews__slider-wrap', {
+    const reviewsSlider = new Swiper('.reviews__slider-wrap', {
       direction: 'horizontal',
       slidesPerView: 1,
 

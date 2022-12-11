@@ -225,8 +225,8 @@
     border-image: url("../img/svg/ellipce.svg");
     border-image-width: 16px;
     border-image-slice: 16;
-    top: -18%;
-    left: -18%;
+    top: -21%;
+    left: -20%;
 
     @include vp-1199 {
       width: 73px;
@@ -243,6 +243,12 @@
     &::before {
       background-color: $color-light-slate-grey;
     }
+  }
+
+  &:active {
+    background: $video-button-hover-gradient;
+    transform: scale(1.1) translate(-43%, -46%);
+    opacity: 0.8;
   }
 }
 

@@ -30,7 +30,6 @@ function createIframe(id) {
 
   iframe.setAttribute('allowfullscreen', '');
   iframe.setAttribute('allow', 'autoplay');
-  // iframe.setAttribute('autoplay', '1');
   iframe.setAttribute('src', generateURL(id));
   iframe.classList.add('promo__video');
 

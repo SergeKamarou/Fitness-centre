@@ -1,7 +1,6 @@
 .subscriptions {
   min-height: 851px;
   width: 100%;
-  // overflow: hidden;
   position: relative;
   background-color: $color-ghost-white;
 
@@ -17,6 +16,7 @@
 
     @include retina {
       background-image: url("../img/weights@2x.png");
+      background-size: contain;
     }
 
     @include vp-1199 {
@@ -141,6 +141,7 @@
 .subscriptions__nav-link {
   @include font(400, 20px, 30px);
   color: $color-sapphire-transparent-05;
+  user-select: none;
 
   @include vp-1199 {
     font-size: 18px;
@@ -163,7 +164,6 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: none;
   justify-content: space-between;
 
   @include vp-1199 {
@@ -177,11 +177,17 @@
   }
 }
 
+.subscriptions__tab-list:not(:target),
+.subscriptions__tab-list:target ~ .subscriptions__tab-list--default {
+  display: none;
+}
+
 .subscriptions__tab-list.is-active {
   display: flex;
 }
 
-.subscriptions__tab-list:target {
+.subscriptions__tab-list:target,
+.subscriptions__tab-list.subscriptions__tab-list--default {
   display: flex;
 }
 
@@ -197,12 +203,6 @@
     border: 7px solid;
     border-image: $card-border-gradient;
     border-image-slice: 1;
-
-    .subscriptions__card-link {
-      background: $button-gradient;
-      border-image: $button-gradient;
-      border-image-slice: 1;
-    }
   }
 
   @include vp-1199 {
@@ -289,6 +289,7 @@
   text-align: center;
   padding: 23px 10px 10px 10px;
   margin: 34px auto 0;
+  user-select: none;
 
   @include vp-767 {
     margin: 29px auto 0;
@@ -299,5 +300,18 @@
     border-image: $button-gradient;
     border-image-slice: 1;
     outline: 4px solid $color-egyptian-blue;
+  }
+
+  @include hover-focus {
+    background: $button-gradient;
+    border-image: $button-gradient;
+    border-image-slice: 1;
+  }
+
+  &:active {
+    background: $button-gradient;
+    border-image: $button-gradient;
+    border-image-slice: 1;
+    opacity: 0.8;
   }
 }

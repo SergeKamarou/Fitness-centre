@@ -3,6 +3,12 @@
   padding-top: 120px;
   padding-bottom: 50px;
 
+  img {
+    object-fit: cover;
+    height: 100%;
+    background-color: $color-sapphire;
+  }
+
   @include vp-1199 {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -60,10 +66,10 @@
   letter-spacing: 0.03em;
   text-indent: 0.05em;
   color: $color-default-white;
-  // width: 200px;
   width: 57%;
   margin: 0;
   padding: 5px 0 0 14px;
+  overflow-wrap: break-word;
 
   @include vp-1199 {
     font-size: 48px;
@@ -74,7 +80,6 @@
 .games__date-list {
   color: $color-default-white;
   margin: 0;
-  // width: 96px;
   width: 27%;
 }
 
@@ -167,10 +172,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 
   @include hover-focus {
     border-color: $color-resolution-blue;
     background-color: $color-resolution-blue;
+  }
+
+  &:active {
+    border-color: $color-resolution-blue;
+    background-color: $color-resolution-blue;
+    border-image-slice: 1;
+    opacity: 0.8;
   }
 
   @include vp-1199 {
