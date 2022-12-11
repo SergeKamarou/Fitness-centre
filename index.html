@@ -110,26 +110,6 @@
               <a class="subscriptions__nav-link" href="#12-months" data-tab-button>12&nbsp;месяцев</a>
             </li>
           </ul>
-          <ul class="subscriptions__tab-list" id="1-month" data-tab>
-            <li class="subscriptions__card" tabindex="0">
-              <h3 class="subscriptions__card-title">С&nbsp;тренером</h3>
-              <p class="subscriptions__card-subtitle">12&nbsp;занятий</p>
-              <span class="subscriptions__card-price" data-price="5000">5000 <span class="rouble">₽</span></span>
-              <a class="subscriptions__card-link" href="#">купить абонемент</a>
-            </li>
-            <li class="subscriptions__card" tabindex="0">
-              <h3 class="subscriptions__card-title">Дневной</h3>
-              <p class="subscriptions__card-subtitle">с&nbsp;8:00 до&nbsp;17:00</p>
-              <span class="subscriptions__card-price" data-price="1700">1700 <span class="rouble">₽</span></span>
-              <a class="subscriptions__card-link" href="#">купить абонемент</a>
-            </li>
-            <li class="subscriptions__card" tabindex="0">
-              <h3 class="subscriptions__card-title">Полный день</h3>
-              <p class="subscriptions__card-subtitle">с&nbsp;8:00 до&nbsp;22:00</p>
-              <span class="subscriptions__card-price" data-price="2700">2700 <span class="rouble">₽</span></span>
-              <a class="subscriptions__card-link" href="#">купить абонемент</a>
-            </li>
-          </ul>
           <ul class="subscriptions__tab-list" id="6-months" data-tab>
             <li class="subscriptions__card" tabindex="0">
               <h3 class="subscriptions__card-title">С&nbsp;тренером</h3>
@@ -170,6 +150,26 @@
               <a class="subscriptions__card-link" href="#">купить абонемент</a>
             </li>
           </ul>
+          <ul class="subscriptions__tab-list subscriptions__tab-list--default" id="1-month" data-tab>
+            <li class="subscriptions__card" tabindex="0">
+              <h3 class="subscriptions__card-title">С&nbsp;тренером</h3>
+              <p class="subscriptions__card-subtitle">12&nbsp;занятий</p>
+              <span class="subscriptions__card-price" data-price="5000">5000 <span class="rouble">₽</span></span>
+              <a class="subscriptions__card-link" href="#">купить абонемент</a>
+            </li>
+            <li class="subscriptions__card" tabindex="0">
+              <h3 class="subscriptions__card-title">Дневной</h3>
+              <p class="subscriptions__card-subtitle">с&nbsp;8:00 до&nbsp;17:00</p>
+              <span class="subscriptions__card-price" data-price="1700">1700 <span class="rouble">₽</span></span>
+              <a class="subscriptions__card-link" href="#">купить абонемент</a>
+            </li>
+            <li class="subscriptions__card" tabindex="0">
+              <h3 class="subscriptions__card-title">Полный день</h3>
+              <p class="subscriptions__card-subtitle">с&nbsp;8:00 до&nbsp;22:00</p>
+              <span class="subscriptions__card-price" data-price="2700">2700 <span class="rouble">₽</span></span>
+              <a class="subscriptions__card-link" href="#">купить абонемент</a>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="games">
@@ -188,6 +188,8 @@
             <a class="games__link" href="#">Заполнить заявку</a>
           </div>
           <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/content/games-mobile.webp 1x, img/content/games-mobile@2x.webp 2x">
             <source type="image/webp" media="(max-width: 1199px)"
               srcset="img/content/games-tablet.webp 1x, img/content/games-tablet@2x.webp 2x">
             <source type="image/webp" media="(min-width: 1200px)"
@@ -565,14 +567,19 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrap container">
+        <a class="page-footer__nav-link page-footer__nav-link--logo">
+          <svg width="88" height="32" viewBox="0 0 119 23" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
         <ul class="page-footer__nav-list">
-          <li class="page-footer__nav-item page-footer__nav-item--logo">
+          <!-- <li class="page-footer__nav-item page-footer__nav-item--logo">
             <a class="page-footer__nav-link page-footer__nav-link--logo">
               <svg width="88" height="32" viewBox="0 0 119 23" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#logo"></use>
               </svg>
             </a>
-          </li>
+          </li> -->
           <li class="page-footer__nav-item page-footer__nav-item--services">
             <a class="page-footer__nav-link" href="№">Услуги</a>
           </li>
