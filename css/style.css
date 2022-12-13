@@ -2385,23 +2385,16 @@ button,
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
-  list-style-type: none;
+  list-style-type: disc;
 }
 
 .trainers__info-item {
   margin-bottom: 13px;
-  position: relative;
 }
 
-.trainers__info-item::before {
-  content: "";
-  height: 6px;
-  width: 6px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  position: absolute;
-  left: -17px;
-  top: 7px;
+.trainers__info-item::marker {
+  font-size: 17px;
+  line-height: 1;
 }
 
 .trainers__slider-button {
@@ -3204,6 +3197,12 @@ button,
   }
 */
 
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
+  .special__img-wrap {
+    background-image: url("../img/offer@2x.png");
+  }
+}
+
 @media (max-width: 1199px) {
   .container {
     padding: 0 45px;
@@ -3634,6 +3633,7 @@ button,
   .special__img-wrap {
     width: 58.8495575221%;
     background-image: url("../img/offer-tab.png");
+    background-size: cover;
   }
 
   .reviews__wrap {
@@ -4528,9 +4528,5 @@ button,
   .subscriptions::after {
     background-image: url("../img/weights@2x.png");
     background-size: contain;
-  }
-
-  .special__img-wrap {
-    background-image: url("../img/offer@2x.png");
   }
 }
