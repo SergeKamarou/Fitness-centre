@@ -196,13 +196,16 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  @include retina {
-    background-image: url("../img/offer@2x.png");
+  @media (min-width: 1200px) {
+    @include retina {
+      background-image: url("../img/offer@2x.png");
+    }
   }
 
   @include vp-1199 {
     width: calc(399 / 678 * 100%);
     background-image: url("../img/offer-tab.png");
+    background-size: cover;
 
     @include retina {
       background-image: url("../img/offer-tab@2x.png");

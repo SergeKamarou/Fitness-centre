@@ -180,22 +180,15 @@
 .trainers__info-list {
   @include font(400, 14px, 21px);
   color: $color-default-white;
-  list-style-type: none;
+  list-style-type: disc;
 }
 
 .trainers__info-item {
   margin-bottom: 13px;
-  position: relative;
 
-  &::before {
-    content: "";
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
-    background-color: $color-default-white;
-    position: absolute;
-    left: -17px;
-    top: 7px;
+  &::marker {
+    font-size: 17px;
+    line-height: 1;
   }
 }
 
