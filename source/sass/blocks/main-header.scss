@@ -151,11 +151,22 @@
     max-width: 420px;
     margin: 0 auto 23px;
     align-items: flex-start;
+    justify-content: space-between;
   }
 }
 
 .main-header__title {
   text-align: end;
+  overflow-wrap: break-word;
+  max-width: 260px;
+
+  @include vp-1199 {
+    max-width: 210px;
+  }
+
+  @include vp-767 {
+    max-width: 190px;
+  }
 
   h1 {
     @include font(600, 97px, 110px);
@@ -190,11 +201,13 @@
       font-size: 34px;
       line-height: 53px;
       margin: 0 4px 0 0;
+      max-width: 210px;
     }
 
     @include vp-767 {
       font-size: 28px;
       line-height: 34px;
+      max-width: 190px;
     }
   }
 }
@@ -220,6 +233,7 @@
   @include vp-767 {
     margin: 0 -12px 0 0;
     padding: 123px 0 31px;
+    width: 30%;
   }
 }
 

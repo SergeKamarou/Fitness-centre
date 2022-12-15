@@ -1611,6 +1611,8 @@ button,
 
 .main-header__title {
   text-align: end;
+  overflow-wrap: break-word;
+  max-width: 260px;
 }
 
 .main-header__title h1 {
@@ -3272,6 +3274,10 @@ button,
     max-width: 324px;
   }
 
+  .main-header__title {
+    max-width: 210px;
+  }
+
   .main-header__title h1 {
     font-size: 76px;
     line-height: 86px;
@@ -3283,6 +3289,7 @@ button,
     font-size: 34px;
     line-height: 53px;
     margin: 0 4px 0 0;
+    max-width: 210px;
   }
 
   .main-header__title-description {
@@ -3858,6 +3865,13 @@ button,
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .main-header__title {
+    max-width: 190px;
   }
 
   .main-header__title h1 {
@@ -3869,11 +3883,13 @@ button,
   .main-header__title span {
     font-size: 28px;
     line-height: 34px;
+    max-width: 190px;
   }
 
   .main-header__title-description {
     margin: 0 -12px 0 0;
     padding: 123px 0 31px;
+    width: 30%;
   }
 
   .main-header__link-button {
