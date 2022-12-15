@@ -49,6 +49,7 @@ const initSliders = () => {
     const reviewsSlider = new Swiper('.reviews__slider-wrap', {
       direction: 'horizontal',
       slidesPerView: 1,
+      // autoHeight: true,
 
       navigation: {
         nextEl: '.reviews__button--next',

@@ -2805,7 +2805,11 @@ button,
   -webkit-column-gap: 28px;
   -moz-column-gap: 28px;
   column-gap: 28px;
+  row-gap: 13px;
   padding: 55px 55px 44px 61px;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+  height: auto;
 }
 
 .reviews__item span {

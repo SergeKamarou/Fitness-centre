@@ -70,7 +70,10 @@
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 28px;
+  row-gap: 13px;
   padding: 55px 55px 44px 61px;
+  grid-auto-rows: min-content;
+  height: auto;
 
 
   span {
