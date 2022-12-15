@@ -18,7 +18,7 @@
   @include font(600,54px, 1);
   font-family: $ff-secondary;
   letter-spacing: 0.03em;
-  margin: 0 0 42px;
+  margin: 0 0 42px -2px;
   width: 100%;
 
   @include vp-1199 {

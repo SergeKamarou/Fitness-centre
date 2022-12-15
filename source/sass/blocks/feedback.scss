@@ -7,12 +7,12 @@
 }
 
 .feedback__wrap {
-  padding: 72px 170px 37px 20px;
+  padding: 71px 170px 37px 20px;
   display: flex;
   justify-content: flex-end;
 
   @include vp-1199 {
-    padding: 66px 35px 70px 4px;
+    padding: 63px 35px 68px 4px;
     justify-content: center;
   }
 
@@ -47,6 +47,7 @@
 
     @include vp-1199 {
       width: 65%;
+      row-gap: 30px;
     }
 
     @include vp-767 {
@@ -93,7 +94,7 @@
     border: 3px solid $color-default-white;
     background-color: $color-sapphire;
     width: 100%;
-    min-height: 52px;
+    min-height: 54px;
     letter-spacing: 0.05em;
     cursor: pointer;
     user-select: none;
@@ -108,7 +109,7 @@
     }
 
     @include vp-767 {
-      margin-top: 8px;
+      margin-top: 5px;
     }
   }
 }

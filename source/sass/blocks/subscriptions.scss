@@ -14,9 +14,11 @@
     background-image: url("../img/weights.png");
     background-repeat: no-repeat;
 
-    @include retina {
-      background-image: url("../img/weights@2x.png");
-      background-size: contain;
+    @media (min-width: 1200px) {
+      @include retina {
+        background-image: url("../img/weights@2x.png");
+        background-size: contain;
+      }
     }
 
     @include vp-1199 {
@@ -28,6 +30,7 @@
 
       @include retina {
         background-image: url("../img/weights-tablet@2x.png");
+        background-size: 423px, 444px;
       }
     }
 
@@ -254,10 +257,14 @@
     list-style: 150px;
     color: $color-whisper;
     opacity: 0.48;
-    top: -64px;
+    top: -33px;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
+
+    @include vp-1199 {
+      top: -25px;
+    }
 
     @include vp-767 {
       font-size: 80px;
