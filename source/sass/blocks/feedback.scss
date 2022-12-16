@@ -58,10 +58,10 @@
 
   input {
     @include font(400, 14px, 16px);
-    color: $color-default-white;
+    color: $color-deep-sky-blue;
     background-color: $color-sapphire;
     border: none;
-    border-bottom: 1px solid $color-default-white;
+    border-bottom: 1px solid $color-deep-sky-blue;
     padding: 7px 10px 7px 0;
     width: 46%;
 
@@ -74,16 +74,20 @@
     }
 
     &::placeholder {
-      color: $color-light-slate-grey;
+      color: $color-default-white;
       user-select: none;
     }
 
     &:placeholder-shown {
-      border-color: $color-light-slate-grey;
+      border-color: $color-default-white;
     }
 
     @include hover-focus {
-      border-color: $color-default-white;
+      border-color: $color-deep-sky-blue;
+    }
+
+    &:valid {
+      border-color: #00ff00;
     }
   }
 

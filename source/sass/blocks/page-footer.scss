@@ -115,7 +115,7 @@
   user-select: none;
 
   @include hover-focus {
-    color: $color-dark-gray;
+    color: $color-deep-sky-blue;
   }
 
   &:active {
@@ -177,7 +177,7 @@
 
   @include hover-focus {
     svg {
-      fill: $color-dark-gray;
+      fill: $color-deep-sky-blue;
     }
   }
 

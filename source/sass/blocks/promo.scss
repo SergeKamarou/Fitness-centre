@@ -250,6 +250,11 @@
     transform: scale(1.1) translate(-43%, -46%);
     opacity: 0.8;
   }
+
+  &:focus-visible {
+    outline: 3px solid $color-persian-blue;
+    outline-offset: 12px;
+  }
 }
 
 .promo__video {
