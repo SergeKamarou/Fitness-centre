@@ -124,7 +124,8 @@
 
 .promo__video-wrap {
   position: absolute;
-  bottom: 120px;
+  // bottom: 120px;
+  top: 408px;
   left: 38%;
   width: 364px;
   height: 228px;
@@ -134,6 +135,7 @@
     height: 167px;
     left: 50%;
     bottom: 11.6%;
+    top: auto;
     transform: translateX(-50%);
   }
 

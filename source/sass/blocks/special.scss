@@ -166,6 +166,7 @@
   letter-spacing: 0.05em;
   margin-top: auto;
   user-select: none;
+  width: fit-content;
 
   @include hover-focus {
     color: $color-crimson;
@@ -185,7 +186,7 @@
   }
 
   @include vp-767 {
-    text-align: center;
+    margin: auto auto 0;
   }
 }
 

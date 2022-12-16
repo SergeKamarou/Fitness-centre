@@ -74,10 +74,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  position: absolute;
 
   @include vp-1199 {
     width: 70%;
     column-gap: 25px;
+    position: static;
   }
 
   @include vp-767 {
@@ -169,23 +171,23 @@
   }
 
   h1 {
-    @include font(600, 97px, 110px);
+    @include font(600, 92px, 110px);
     font-family: $ff-secondary;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     margin: 16px -1px 0 0;
 
     @include vp-1199 {
-      font-size: 76px;
+      font-size: 72px;
       line-height: 86px;
       margin: 0 1px 0 0;
       text-transform: none;
     }
 
     @include vp-767 {
-      font-size: 74px;
+      font-size: 72px;
       line-height: 86px;
-      margin: 12px 3px 0 0;
+      margin: 12px 0 0;
     }
   }
 
@@ -216,7 +218,7 @@
   @include font(400, 14px, 21px);
   list-style-type: none;
   margin: 0;
-  padding: 195px 0 0;
+  padding: 195px 3px 0 0;
   font-family: $ff-basic;
   text-align: end;
   width: 60%;

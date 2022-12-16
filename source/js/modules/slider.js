@@ -9,7 +9,6 @@ const initSliders = () => {
       direction: 'horizontal',
       loop: true,
       loopFillGroupWithBlank: true,
-      slideToClickedSlide: true,
 
       navigation: {
         nextEl: '.swiper-button-next',
