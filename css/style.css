@@ -1253,6 +1253,14 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-style: normal;
+  font-weight: 400;
+  font-family: "Rouble";
+  font-display: swap;
+  src: url("../fonts/rouble.woff2") format("woff2"), url("../fonts/rouble.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
   font-weight: 300;
   font-family: "Roboto Condensed";
   font-display: swap;
@@ -1288,7 +1296,7 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   font-family: "Alumni Sans";
   font-display: swap;
-  src: url("../../fonts/alumnisans-bold.woff2") format("woff2"), url("../../fonts/alumnisans-bold.woff") format("woff");
+  src: url("../fonts/alumnisans-bold.woff2") format("woff2"), url("../fonts/alumnisans-bold.woff") format("woff");
 }
 
 @font-face {
@@ -1571,6 +1579,7 @@ button,
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  position: absolute;
 }
 
 .main-header__phone {
@@ -1617,10 +1626,10 @@ button,
 
 .main-header__title h1 {
   font-weight: 600;
-  font-size: 97px;
+  font-size: 92px;
   line-height: 110px;
   font-family: "Alumni Sans", "Arial", sans-serif;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   margin: 16px -1px 0 0;
 }
@@ -1642,7 +1651,7 @@ button,
   line-height: 21px;
   list-style-type: none;
   margin: 0;
-  padding: 195px 0 0;
+  padding: 195px 3px 0 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   text-align: end;
   width: 60%;
@@ -1741,7 +1750,7 @@ button,
 
 .promo__video-wrap {
   position: absolute;
-  bottom: 120px;
+  top: 408px;
   left: 38%;
   width: 364px;
   height: 228px;
@@ -1967,6 +1976,9 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .subscriptions__tab-list:not(:target),
@@ -2016,7 +2028,7 @@ button,
   font-size: 16px;
   line-height: 24px;
   color: #495a7d;
-  margin: 9px 0 67px;
+  margin: 9px 0 59px;
 }
 
 .subscriptions__card-price {
@@ -2045,6 +2057,11 @@ button,
 
 .subscriptions__card-price .rouble {
   color: #102654;
+}
+
+.subscriptions__card-price .rouble1 {
+  color: #102654;
+  font-family: "Alumni Sans", "Arial", sans-serif;
 }
 
 .subscriptions__card-link {
@@ -2734,6 +2751,9 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .special__link.focus-visible:focus {
@@ -2839,7 +2859,7 @@ button,
 }
 
 .reviews__button {
-  top: 54%;
+  top: 286px;
 }
 
 .reviews__button::after {
@@ -3231,6 +3251,12 @@ button,
   }
 }
 
+@media (min-width: 1200px) {
+  .subscriptions__card:last-child {
+    margin-right: auto;
+  }
+}
+
 @media (max-width: 1199px) {
   .container {
     padding: 0 45px;
@@ -3266,6 +3292,7 @@ button,
     -webkit-column-gap: 25px;
     -moz-column-gap: 25px;
     column-gap: 25px;
+    position: static;
   }
 
   .main-header__phone {
@@ -3292,7 +3319,7 @@ button,
   }
 
   .main-header__title h1 {
-    font-size: 76px;
+    font-size: 72px;
     line-height: 86px;
     margin: 0 1px 0 0;
     text-transform: none;
@@ -3369,6 +3396,7 @@ button,
     height: 167px;
     left: 50%;
     bottom: 11.6%;
+    top: auto;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -3446,7 +3474,7 @@ button,
   }
 
   .subscriptions__card-price::before {
-    top: -25px;
+    top: -18px;
   }
 
   .games__wrap {
@@ -3888,9 +3916,9 @@ button,
   }
 
   .main-header__title h1 {
-    font-size: 74px;
+    font-size: 72px;
     line-height: 86px;
-    margin: 12px 3px 0 0;
+    margin: 12px 0 0;
   }
 
   .main-header__title span {
@@ -4020,13 +4048,13 @@ button,
   }
 
   .subscriptions__card-subtitle {
-    margin: 9px 0 55px;
+    margin: 9px 0 48px;
   }
 
   .subscriptions__card-price::before {
     font-size: 80px;
     line-height: 120px;
-    top: -45px;
+    top: -39px;
     left: 49%;
   }
 
@@ -4119,8 +4147,7 @@ button,
   .advantages__main-title {
     font-size: 32px;
     line-height: 38px;
-    margin: 0;
-    text-align: left;
+    margin: 0 54px 0 0;
     text-indent: 1.2em;
   }
 
@@ -4235,7 +4262,7 @@ button,
   }
 
   .special__link {
-    text-align: center;
+    margin: auto auto 0;
   }
 
   .special__img-wrap {
@@ -4269,8 +4296,8 @@ button,
   }
 
   .reviews__item {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 90px 1fr;
+    grid-template-columns: 90px 1fr;
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
     column-gap: 0;
