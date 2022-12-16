@@ -2028,7 +2028,7 @@ button,
   font-size: 16px;
   line-height: 24px;
   color: #495a7d;
-  margin: 9px 0 59px;
+  margin: 9px 0 65px;
 }
 
 .subscriptions__card-price {
@@ -2055,11 +2055,7 @@ button,
   z-index: -1;
 }
 
-.subscriptions__card-price .rouble {
-  color: #102654;
-}
-
-.subscriptions__card-price .rouble1 {
+.subscriptions__card-price .rouble-sign {
   color: #102654;
   font-family: "Roboto Condensed", "Arial", sans-serif;
 }
