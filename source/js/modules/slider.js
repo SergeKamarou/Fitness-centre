@@ -8,7 +8,10 @@ const initSliders = () => {
     const trainersSlider = new Swiper('.swiper--trainers', {
       direction: 'horizontal',
       loop: true,
+      loopedSlides: 0,
       loopFillGroupWithBlank: true,
+      watchSlidesProgress: true,
+      observer: true,
 
       navigation: {
         nextEl: '.swiper-button-next',
@@ -33,12 +36,26 @@ const initSliders = () => {
           spaceBetween: 40,
         },
       },
-    });
 
-    let sliderDuplecateElements = trainersSliderContainer.querySelectorAll('.swiper-slide-duplicate');
+      on: {
+        init() {
+          const sliderDuplecateElements = trainersSliderContainer.querySelectorAll('.swiper-slide-duplicate');
+          sliderDuplecateElements.forEach((item) => {
+            item.setAttribute('tabindex', '-1');
+          });
+        },
 
-    sliderDuplecateElements.forEach((item) => {
-      item.removeAttribute('tabindex');
+        slideChange() {
+          trainersSliderContainer.querySelectorAll('.swiper-slide').forEach((item) => {
+            item.setAttribute('tabindex', '-1');
+          });
+
+          let activeSlides = trainersSliderContainer.querySelectorAll('.swiper-slide-visible');
+          activeSlides.forEach((item) => {
+            item.setAttribute('tabindex', '0');
+          });
+        },
+      },
     });
   }
 
@@ -48,6 +65,10 @@ const initSliders = () => {
     const reviewsSlider = new Swiper('.reviews__slider-wrap', {
       direction: 'horizontal',
       slidesPerView: 1,
+
+      keyboard: {
+        enabled: true,
+      },
 
       navigation: {
         nextEl: '.reviews__button--next',
