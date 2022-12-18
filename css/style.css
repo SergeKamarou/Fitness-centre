@@ -1253,14 +1253,6 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "Rouble";
-  font-display: swap;
-  src: url("../fonts/rouble.woff2") format("woff2"), url("../fonts/rouble.woff") format("woff");
-}
-
-@font-face {
-  font-style: normal;
   font-weight: 300;
   font-family: "Roboto Condensed";
   font-display: swap;
@@ -1570,7 +1562,7 @@ button,
 }
 
 .main-header__phone-wrap {
-  width: 17%;
+  width: 16%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2037,6 +2029,7 @@ button,
   line-height: 90px;
   color: #103aae;
   position: relative;
+  margin-left: 6px;
 }
 
 .subscriptions__card-price::before {
@@ -2048,7 +2041,7 @@ button,
   color: #e8e8e8;
   opacity: 0.48;
   top: -33px;
-  left: 50%;
+  left: 49%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -2058,6 +2051,7 @@ button,
 .subscriptions__card-price .rouble-sign {
   color: #102654;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  margin-left: -2px;
 }
 
 .subscriptions__card-link {
@@ -2836,14 +2830,14 @@ button,
 .reviews__item span {
   font-weight: 700;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5;
   color: #ffffff;
 }
 
 .reviews__item p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 1.4;
   color: #ffffff;
   margin: 0;
 }
@@ -3470,7 +3464,7 @@ button,
   }
 
   .subscriptions__card-price::before {
-    top: -18px;
+    top: -24px;
   }
 
   .games__wrap {
@@ -4044,13 +4038,13 @@ button,
   }
 
   .subscriptions__card-subtitle {
-    margin: 9px 0 48px;
+    margin: 9px 0 55px;
   }
 
   .subscriptions__card-price::before {
     font-size: 80px;
     line-height: 120px;
-    top: -39px;
+    top: -46px;
     left: 49%;
   }
 
@@ -4137,7 +4131,7 @@ button,
   }
 
   .advantages__wrap {
-    padding: 64px 0 50px;
+    padding: 64px 0 60px;
   }
 
   .advantages__main-title {
@@ -4201,7 +4195,7 @@ button,
   }
 
   .special__wrap {
-    padding-top: 75px;
+    padding-top: 65px;
     padding-bottom: 50px;
   }
 
@@ -4282,7 +4276,7 @@ button,
   }
 
   .reviews__item span {
-    line-height: 26px;
+    line-height: 1.3;
     padding: 9px 0 0 11px;
   }
 
@@ -4297,8 +4291,7 @@ button,
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
     column-gap: 0;
-    padding: 40px 22px 20px;
-    min-height: 335px;
+    padding: 40px 22px 35px;
   }
 
   .reviews__img-wrap {

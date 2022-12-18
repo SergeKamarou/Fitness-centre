@@ -14,7 +14,6 @@
   <link rel="preload" href="fonts/robotocondensed-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/robotocondensed-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/rouble.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -158,7 +157,7 @@
             <li class="subscriptions__card" tabindex="0">
               <h3 class="subscriptions__card-title">С&nbsp;тренером</h3>
               <p class="subscriptions__card-subtitle">12&nbsp;занятий</p>
-              <span class="subscriptions__card-price" data-price="5000">5000 <span class="rouble-sign"><b>₽</b></span></span>
+              <span class="subscriptions__card-price" data-price="5000">5000 <span class="rouble-sign">₽</span></span>
               <a class="subscriptions__card-link" href="#">купить абонемент</a>
             </li>
             <li class="subscriptions__card" tabindex="0">
@@ -206,6 +205,7 @@
       <section class="trainers" id="trainers">
         <div class="trainers__wrap trainers__wrap--nojs container">
           <h2 class="trainers__title">Тренеры</h2>
+          <div class="trainers__slider-button trainers__slider-button--prev swiper-button-prev"></div>
           <div class="trainers__slider-wrap swiper swiper--trainers">
             <ul class="trainers__list swiper-wrapper swiper-wrapper--trainers">
               <li class="trainers__item swiper-slide" tabindex="0">
@@ -358,46 +358,8 @@
                   </ul>
                 </div>
               </li>
-              <li class="trainers__item swiper-slide" tabindex="0">
-                <div class="trainers__img-wrap">
-                  <picture>
-                    <source type="image/webp" srcset="img/content/pashkov.webp 1x, img/content/pashkov@2x.webp 2x">
-                    <img src="img/content/pashkov.jpg" srcset="img/content/pashkov@2x.jpg 2x" width="260" height="294"
-                      alt="Портрет тренера." loading="lazy">
-                  </picture>
-                </div>
-                <h3 class="trainers__title-name">Александр Пашков</h3>
-                <div class="trainers__about-wrap">
-                  <p class="trainers__about-name">Александр Пашков</p>
-                  <p class="trainers__about-sport">CrossFit</p>
-                  <ul class="trainers__info-list">
-                    <li class="trainers__info-item">Certified Level 3 Trainer</li>
-                    <li class="trainers__info-item">Победитель чемпионата России по&nbsp;CrossFit</li>
-                    <li class="trainers__info-item">Опыт — 6 лет</li>
-                  </ul>
-                </div>
-              </li>
-              <li class="trainers__item swiper-slide" tabindex="0">
-                <div class="trainers__img-wrap">
-                  <picture>
-                    <source type="image/webp" srcset="img/content/ketova.webp 1x, img/content/ketova@2x.webp 2x">
-                    <img src="img/content/ketova.jpg" srcset="img/content/ketova@2x.jpg 2x" width="260" height="294"
-                      alt="Портрет тренера." loading="lazy">
-                  </picture>
-                </div>
-                <h3 class="trainers__title-name">Мария Кетова</h3>
-                <div class="trainers__about-wrap">
-                  <p class="trainers__about-name">Мария Кетова</p>
-                  <p class="trainers__about-sport">TRX</p>
-                  <ul class="trainers__info-list">
-                    <li class="trainers__info-item">Certified Level 4 Trainer</li>
-                    <li class="trainers__info-item">Опыт — 5 лет</li>
-                  </ul>
-                </div>
-              </li>
             </ul>
           </div>
-          <div class="trainers__slider-button trainers__slider-button--prev swiper-button-prev"></div>
           <div class="trainers__slider-button trainers__slider-button--next swiper-button-next"></div>
         </div>
       </section>
